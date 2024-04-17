@@ -28,16 +28,15 @@ body {
   position: relative;
   width: 360px;
   height: 180px;
-  transform: rotateY(20deg) skew(0deg);
   transform-style: preserve-3d;
-  background-image: var(--url);
   background-size: 0;
+  z-index: -10;
 }
 .wrapper::before {
   content: "";
   display: block;
   position: absolute;
-  width: 7.5px;
+  width: 8px;
   height: 720px;
   background: linear-gradient(to left, #fff, #ccc, #fff, #fff);
   left: 7px;
@@ -209,5 +208,33 @@ body {
 @keyframes wave {
   to {
     transform: translateZ(0.0001px) rotateY(-14.1176470588deg);
+  }
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1000;
+  left: 100px;
+  top: calc(50% - 50px); /* Center the circle vertically */
+  transform-style: preserve-3d;
+  transform-origin: center;
+  background: red;
+  animation-name: waveCircle;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes waveCircle {
+  0% {
+    transform: translateZ(0.0005px) rotateY(0deg);
+  }
+  50% {
+    transform: translateZ(0.0005px) rotateY(45deg);
+  }
+  100% {
+    transform: translateZ(0.0005px) rotateY(0deg);
   }
 }/*# sourceMappingURL=style.css.map */

@@ -13,7 +13,9 @@
         <div class="wrapper">
 
         </div>
-        <div class="circle"></div>
+        <div class="circle">
+
+        </div>
     </div>
 
     <script>
@@ -32,6 +34,24 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('.wrapper').innerHTML = elem;
+        });
+
+        // red circle
+        var circle_elem = `\n\t<div class="c c`;
+        var circle_end = ``;
+        var circle_n = 5;
+        for (var i = 0; i < circle_n; i++) {
+            circle_elem = circle_elem + i + `">\n ${'\t'.repeat(i + 1)}<div class="c c`;
+        }
+        circle_elem = circle_elem + i + '">';
+        for (var k = circle_n + 1; k > 0; k--) {
+            circle_end += `\n${'\t'.repeat(k - 1)}</div>`;
+        }
+        circle_end += '\t\n';
+        circle_elem = circle_elem + circle_end;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.circle').innerHTML = circle_elem;
         });
     </script>
 </body>

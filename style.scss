@@ -32,22 +32,34 @@ body {
 	position: relative;
 	width: $n * $width;
 	height: $height;
-	transform: rotateY(20deg) skew(0deg);
 	transform-style: preserve-3d;
-	background-image: var(--url);
 	background-size: 0; 
+	z-index: -10;
 
 	// flag stick
 	&::before {
 		content: "";
 		display: block;
 		position: absolute;
-		width: $width/2;
+		width: 8px;
 		height: $height * 4;
 		background: linear-gradient(to left, #fff, #ccc,#fff, #fff);
 		left: ($width - 1px)/2;
 	}
 }
+
+// .circle{
+// 	width: 100px;
+// 	height: 100px;
+// 	border-radius: 50%;
+// 	position: absolute;
+// 	left: 100px;
+// 	transform-style: preserve-3d;
+// 	transform-origin: 0 0;
+// 	background: red;
+// 	background-repeat: no-repeat;
+
+// }
 
 .s {
 	position: absolute;
@@ -81,4 +93,34 @@ body {
 	to {
 		transform: translateZ(0.0001px) rotateY(#{-$n/1.7}deg);
 	}
+}
+
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+	z-index: 1000;
+    left: 100px;
+    top: calc(50% - 50px); /* Center the circle vertically */
+    transform-style: preserve-3d;
+    transform-origin: center;
+    background: red;
+    animation-name: waveCircle;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes waveCircle {
+    0% {
+        transform: translateZ(0.0005px) rotateY(0deg);
+    }
+    50% {
+        transform: translateZ(0.0005px) rotateY(45deg);
+    }
+    100% {
+        transform: translateZ(0.0005px) rotateY(0deg);
+    }
 }
