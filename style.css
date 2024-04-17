@@ -50,6 +50,7 @@ body {
   width: 15px;
   height: 100%;
   transform-origin: 0 0;
+  background: green;
   background-repeat: no-repeat;
   background-size: 360px 100%;
   transform: translateZ(0.0001px) rotateY(14.1176470588deg);
@@ -64,121 +65,145 @@ body {
 .s1 {
   background-position-x: -15px;
   animation-delay: 0.08s;
+  background: green;
 }
 
 .s2 {
   background-position-x: -30px;
   animation-delay: 0.16s;
+  background: green;
 }
 
 .s3 {
   background-position-x: -45px;
   animation-delay: 0.24s;
+  background: green;
 }
 
 .s4 {
   background-position-x: -60px;
   animation-delay: 0.32s;
+  background: green;
 }
 
 .s5 {
   background-position-x: -75px;
   animation-delay: 0.4s;
+  background: green;
 }
 
 .s6 {
   background-position-x: -90px;
   animation-delay: 0.48s;
+  background: green;
 }
 
 .s7 {
   background-position-x: -105px;
   animation-delay: 0.56s;
+  background: green;
 }
 
 .s8 {
   background-position-x: -120px;
   animation-delay: 0.64s;
+  background: green;
 }
 
 .s9 {
   background-position-x: -135px;
   animation-delay: 0.72s;
+  background: green;
 }
 
 .s10 {
   background-position-x: -150px;
   animation-delay: 0.8s;
+  background: green;
 }
 
 .s11 {
   background-position-x: -165px;
   animation-delay: 0.88s;
+  background: green;
 }
 
 .s12 {
   background-position-x: -180px;
   animation-delay: 0.96s;
+  background: green;
 }
 
 .s13 {
   background-position-x: -195px;
   animation-delay: 1.04s;
+  background: green;
 }
 
 .s14 {
   background-position-x: -210px;
   animation-delay: 1.12s;
+  background: green;
 }
 
 .s15 {
   background-position-x: -225px;
   animation-delay: 1.2s;
+  background: green;
 }
 
 .s16 {
   background-position-x: -240px;
   animation-delay: 1.28s;
+  background: green;
 }
 
 .s17 {
   background-position-x: -255px;
   animation-delay: 1.36s;
+  background: green;
 }
 
 .s18 {
   background-position-x: -270px;
   animation-delay: 1.44s;
+  background: green;
 }
 
 .s19 {
   background-position-x: -285px;
   animation-delay: 1.52s;
+  background: green;
 }
 
 .s20 {
   background-position-x: -300px;
   animation-delay: 1.6s;
+  background: green;
 }
 
 .s21 {
   background-position-x: -315px;
   animation-delay: 1.68s;
+  background: green;
 }
 
 .s22 {
   background-position-x: -330px;
   animation-delay: 1.76s;
+  background: green;
 }
 
 .s23 {
   background-position-x: -345px;
   animation-delay: 1.84s;
+  background: green;
 }
 
 .s24 {
   background-position-x: -360px;
   animation-delay: 1.92s;
+  background: green;
 }
 
 @keyframes wave {

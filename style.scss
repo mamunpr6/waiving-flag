@@ -56,6 +56,7 @@ body {
 	width: $width;
 	height: 100%;
 	transform-origin: 0 0;
+	background: green;
 	background-repeat: no-repeat;
 	background-size: $n * $width 100%;
 	transform: translateZ(0.0001px) rotateY(#{$n/1.7}deg);
@@ -72,6 +73,7 @@ body {
 	.s#{$i} {
 		background-position-x: #{-$i * $width};
 		animation-delay: #{$i * 0.08}s;
+		background: green;
 	}
 }
 
