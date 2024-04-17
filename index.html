@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangladesh Flag</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper" style="--url: url('https://www.flagcolorcodes.com/images/jpg/bangladesh.jpg')">
+
+        </div>
+    </div>
+
+    <script>
+        var elem = `\n\t<div class="s s`;
+        var end = ``;
+        var n = 24;
+        for (var i = 0; i < n; i++) {
+            elem = elem + i + `">\n ${'\t'.repeat(i + 1)}<div class="s s`;
+        }
+        elem = elem + i + '">';
+        for (var k = n + 1; k > 0; k--) {
+            end += `\n${'\t'.repeat(k - 1)}</div>`;
+        }
+        end += '\t\n';
+        elem = elem + end;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.wrapper').innerHTML = elem;
+        });
+    </script>
+</body>
+
+</html>

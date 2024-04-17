@@ -1,0 +1,82 @@
+$n: 24; 
+$width: 15px; 
+$height: $width * $n/2;
+
+*,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body {
+	height: 100vh;
+	background: #eceff1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	perspective: 800px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 700px;
+	transform-style: preserve-3d;
+}
+
+.wrapper {
+	position: relative;
+	width: $n * $width;
+	height: $height;
+	transform: rotateY(20deg) skew(0deg);
+	transform-style: preserve-3d;
+	background-image: var(--url);
+	background-size: 0; 
+
+	// flag stick
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: $width/2;
+		height: $height * 4;
+		background: linear-gradient(to left, #fff, #ccc,#fff, #fff);
+		left: ($width - 1px)/2;
+	}
+}
+
+.s {
+	position: absolute;
+	transform-style: preserve-3d;
+	left: $width - 1px;
+	width: $width;
+	height: 100%;
+	transform-origin: 0 0;
+	background-repeat: no-repeat;
+	background-size: $n * $width 100%;
+	transform: translateZ(0.0001px) rotateY(#{$n/1.7}deg);
+
+	background-image: inherit;
+	animation-name: wave;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+@for $i from 1 through $n {
+	.s#{$i} {
+		background-position-x: #{-$i * $width};
+		animation-delay: #{$i * 0.08}s;
+	}
+}
+
+@keyframes wave {
+	to {
+		transform: translateZ(0.0001px) rotateY(#{-$n/1.7}deg);
+	}
+}
